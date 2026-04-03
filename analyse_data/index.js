@@ -7,6 +7,7 @@ function combineUsers(...arrays) {
 
         combinedObject.users.push(...arrays[i])
     }
-    combinedObject.merge_date = Date.today().toString("M/d/yyyy")
+    combinedObject.merge_date = new Date().toLocaleDateString()
     return combinedObject
 }
+module.exports = combineUsers;
